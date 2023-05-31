@@ -1,69 +1,19 @@
-﻿int n = 0;
+﻿/*
+ A program that produces an array of all of the characters that appear more than once in a string.
 
-while (n <= 0)
+For example, the string “Programmatic Python” would result in the array ['p','r','o','a','m','t'].
 
-{
-    // Form validation 
-    Console.WriteLine("Please enter integer value greater than zero");
-    n = Int32.Parse(Console.ReadLine());
-}
+A program returns an array of strings that are unique words found in the argument.
 
+For example, the string “To be or not to be” returns ["to","be","or","not"].
 
-string[] words = new string[n]; // get console entered amount 
+A program that reverses a provided string 
 
-for (int i = 0; i < n; i++)
-{
-    Console.WriteLine($"Enter word {i + 1}");
+A program that finds the longest unbroken word in a string and prints it
 
-    string newWord = Console.ReadLine();
+For example, the string "Tiptoe through the tulips" would print "through"
 
-    if (newWord.Length > 0 && !newWord.Contains(" "))
-    {
-        words[i] = newWord;
+If there are multiple words tied for greatest length, print the last one
 
-    }
-    else
-    {
-        Console.WriteLine("Sorry but you must enter at least one character.");
-        i--;
-    }
-    /*
-    if(words.All(i => i == ""))
-    {
-        Console.WriteLine("Stop");
-    }
-    */
-}
-char charToCount = ' ';
-while (!Char.IsLetter(charToCount))
-{
-
-    Console.WriteLine("Please enter a character  to count.");
-    charToCount = Char.ToLower(Console.ReadKey().KeyChar);
-    Console.WriteLine();
-}
-
-
-
-
-
-
-Console.WriteLine($"\n You entered the character '{charToCount}'");
-
-// get a count of how many times this character appears in all of the words 
-
-int charCount = 0;
-
-foreach (string word in words)
-{
-    char[] chars = word.ToCharArray();
-
-    foreach (char c in chars)
-    {
-        if (c == charToCount)
-        {
-            charCount++;
-        }
-    }
-}
-Console.WriteLine($"The letter '{charToCount}' was counted {charCount.ToString()} times");
+Research and employ the StringBuilder class and explain its advantages or disadvantages over Strings.
+ */
